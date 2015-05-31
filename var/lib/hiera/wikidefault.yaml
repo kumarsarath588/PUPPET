@@ -1,0 +1,5 @@
+---
+mediawiki::wikidbserver: localhost
+mediawiki::wikidbuser: root
+mediawiki::wikidbpassword: Pass@word1
+mediawiki::wikiupgradekey: puppet
