@@ -1,27 +1,18 @@
 node 'test1.linux.com' {
-  
-  hiera_include('classes')
 
-  #nginx::resource::upstream { 'guacamole_app':
-  #members => [
-  #  '192.168.201.211:8080',
-  #  '192.168.201.212:8080',
-  #],
-  #}
-  #nginx::resource::vhost { 'guacamole.linux.com':
-  #proxy => 'http://guacamole_app',
-  #ssl_port          => 443,
-  #ssl                  => true,
-  #ssl_cert             => '/root/ssl/certs/self-ssl.crt',
-  #ssl_key              => '/root/ssl/certs/self-ssl.key',
-  #}
-  
+  hiera_include('classes')  
 }
 
 node 'test2.linux.com' {
-  
-  class { 'linux': }
-  class { 'mediawiki': }
+
+  class { '::mediawiki': }
+  class { '::linux': }
+ 
+}
+
+node 'nginx.linux.com' {  
+
+   hiera_include('classes')
 
 }
 
