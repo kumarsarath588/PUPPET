@@ -16,6 +16,12 @@ node 'nginx.linux.com' {
 
 }
 
+node 'windows-server' {  
+
+   hiera_include('classes')
+
+}
+
 class linux {
   $admintools = ['git', 'nano', 'screen']
 
