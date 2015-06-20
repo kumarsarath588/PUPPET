@@ -4,5 +4,5 @@ classes:
   - linux
 mediawiki::wikisitename: wiki
 mediawiki::wikimetanamespace: Wiki
-mediawiki::wikiserver: http://192.168.201.205
+mediawiki::wikiserver: http://192.168.201.206
 mediawiki::wikidbname: wiki 
